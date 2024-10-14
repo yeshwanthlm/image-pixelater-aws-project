@@ -3,14 +3,14 @@ This project demonstrates how to build an automated, event-driven image processi
 
 ![Serverless Projects](https://github.com/user-attachments/assets/f2c51dcb-bd13-4bb4-9f7b-886915732272)
 
-What You Will Learn:
+## What You Will Learn:
 * AWS Lambda Event-Driven Architecture: How to trigger Lambda functions in response to S3 events.
 * Image Processing with Python (Pillow Library): Techniques for manipulating images, including pixelation.
 * S3 Bucket Operations: How to manage objects across multiple S3 buckets, including permissions and event notifications.
 * Error Handling and Optimization: Implementing best practices for error handling in Lambda functions.
 * Serverless Deployment: Experience deploying a fully serverless pipeline on AWS, ideal for real-time, automated tasks.
 
-Where Pixelation is Used:
+## Where Pixelation is Used:
 Pixelation can be useful in several scenarios, including:
 
 * Privacy Protection: Pixelating parts of images, such as faces or sensitive areas, is often used in media or public content to anonymize individuals.
@@ -19,13 +19,13 @@ Pixelation can be useful in several scenarios, including:
 * Video and Image Compression: Pixelated previews are useful in scenarios where image or video quality can be progressively enhanced as more data is loaded.
 * Blur Detection and Machine Learning: Pixelation can also be used in preprocessing images to test machine learning models on recognizing shapes, patterns, or when reducing visual noise is necessary for certain types of analysis.
 
-Project Solution:
+## Project Solution:
 
-## Stage 1: Create the S3 Buckets
+### Stage 1: Create the S3 Buckets
   * Bucket 1: amc-image-pixelater-source
   * Bucket 2: amc-image-pixelater-processed
 
-## Stage 2: Develop the Lambda Function Code:
+### Stage 2: Develop the Lambda Function Code:
   * Create a folder named ```my_lambda_deployment```.
   * Move into that folder (```cd my_lambda_deployment```).
   * Create a folder called ```lambda```.
@@ -36,9 +36,9 @@ Project Solution:
   * From the same folder, run ```zip -r ../my-deployment-package.zip .``` which will create a lambda function zip, containing all these files in the parent directory.
   * This zip will be the same zip which is linked below, so if you have any issues with the lambda function, you can use the one that's pre-created.
 
-## Stage 3 - Create and Configure the Lambda Function
+### Stage 3 - Create and Configure the Lambda Function
 
-## Stage 4 - Test and Monitor
+### Stage 4 - Test and Monitor
 
-Outcome:
+## Outcome:
 By the end of this project, you will have a complete event-driven image processing pipeline capable of automatically pixelating images at multiple resolutions, with the processed images stored in a separate S3 bucket. This architecture is scalable, efficient, and can be adapted for other image processing tasks, providing a practical example of serverless computing in action.
