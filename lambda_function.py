@@ -3,7 +3,7 @@ import json
 import uuid
 import boto3
 from botocore.exceptions import ClientError
-from PIL import Image
+from PIL import Image  # Import Image from PIL
 
 # bucketname for pixelated images
 processed_bucket = os.environ['processed_bucket']
@@ -75,6 +75,7 @@ def lambda_handler(event, context):
     }
 
 def pixelate(pixelsize, image_path, pixelated_img_path):
+    # Ensure Image module is used here
     img = Image.open(image_path)
     temp_img = img.resize(pixelsize, Image.BILINEAR)
     new_img = temp_img.resize(img.size, Image.NEAREST)
