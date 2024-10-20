@@ -3,7 +3,7 @@ import json
 import uuid
 import boto3
 from botocore.exceptions import ClientError
-from PIL.Image import core as _imaging
+from PIL import Image
 
 # bucketname for pixelated images
 processed_bucket = os.environ['processed_bucket']
